@@ -50,7 +50,7 @@ class Tileset {
 		untypedTags = new Map();
 		if( json.enumTags!=null ) {
 			for(t in json.enumTags) {
-				untypedTags.set( p.capitalize(t.enumValueId), [] );
+				untypedTags.set( p.capitalize(t.enumValueId), new Map<Int,Int>() );
 				for(tid in t.tileIds)
 					untypedTags.get( p.capitalize(t.enumValueId) ).set(tid,tid);
 			}
